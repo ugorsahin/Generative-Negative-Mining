@@ -1,0 +1,9 @@
+groundingdino @ git+https://github.com/IDEA-Research/GroundingDINO
+stanza
+talkingheads
+segment_anything @ git+https://github.com/facebookresearch/segment-anything.git
+diffusers
+salesforce-lavis
+pandas
+torch
+tqdm
