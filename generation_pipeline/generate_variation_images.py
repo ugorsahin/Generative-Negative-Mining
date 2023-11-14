@@ -119,9 +119,9 @@ if __name__ == '__main__':
     parser.add_argument("--gd-checkpoint", default="../model_lib/groundingdino_swint_ogc.pth")
     parser.add_argument("--sam-checkpoint", default='../model_lib/sam_vit_h_4b8939.pth')
     parser.add_argument("--sd-checkpoint", default="stabilityai/stable-diffusion-2-inpainting")
-    parser.add_argument("--device", default='cuda')
-    parser.add_argument("--output-dir", default='../outputs', type=Path)
-    parser.add_argument("--input-folder", default='../assets', type=Path)
+    parser.add_argument("--device", type=torch.device, default='cuda')
+    parser.add_argument("--output-dir", type=Path, default='../outputs')
+    parser.add_argument("--input-folder", type=Path, default='../assets')
     args = parser.parse_args()
 
     df = pd.read_json(args.input_file)
@@ -129,6 +129,7 @@ if __name__ == '__main__':
         df=df,
         save_path=args.output_dir / 'variations.json'
     )
+
     _gd = gd.load_model(
         config_path=args.gd_config,
         model_path=args.gd_checkpoint,
@@ -139,7 +140,7 @@ if __name__ == '__main__':
         torch_dtype=torch.float16,
     )
     _sd.set_progress_bar_config(leave=False)
-    _sd = _sd.to("cuda")
+    _sd = _sd.to(args.device)
 
     groups = [(k, _df) for k, _df in gen_df.groupby(['origin_name', 'source', 'item'])]
     random.shuffle(groups)

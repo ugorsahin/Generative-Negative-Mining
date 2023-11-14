@@ -266,10 +266,10 @@ if __name__ == "__main__":
                         help='threshold value')
     parser.add_argument('--verbose', action='store_true',
                         help='If true, logging info redirected to stdin')
-    parser.add_argument('--device', default=None,
+    parser.add_argument('--device', default='cuda', type=torch.device,
                         help='Device to perform actions')
-    _args = parser.parse_args()
-    _args.device = torch.device(_args.device)
-    _args.save_folder.mkdir(parents=True, exist_ok=_args.force)
+    
+    arguments = parser.parse_args()
+    arguments.save_folder.mkdir(parents=True, exist_ok=arguments.force)
 
-    main(_args)
+    main(arguments)
