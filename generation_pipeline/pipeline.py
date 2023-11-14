@@ -109,7 +109,7 @@ if __name__ == '__main__':
         image_path = str(item['_image_source'])
         save_ann_path = ann_path / Path(item['image']).name if ann_path else None
 
-        tags, tag2text_caption, _ = t2t.process_one_image(
+        tags, tag2text_caption, _ = t2t.extract_tags(
             tag2text_model      = tag2text_model,
             gd_model            = gd_model,
             tag2text_transform  = transform,
