@@ -1,5 +1,10 @@
-# Generative-Negative-Mining
-[Project Page](https://ugorsahin.github.io/enhancing-multimodal-compositional-reasoning-of-vlm.html)
+<h1 align="center">Generative Negative Mining</h1>
+<p align="center">
+  <a href="https://ugorsahin.github.io/enhancing-multimodal-compositional-reasoning-of-vlm.html"> Project Page </a> |
+  <a href="https://huggingface.co/ugursahin/generative-negative-mining-clip"> Model Checkpoint </a> |
+  <a href="https://huggingface.co/datasets/ugursahin/generative-negative-mining-dataset"> Dataset </a> 
+</p>
+
 
 This is the official implementation for the paper 
 [ Enhancing Multimodal Compositional Reasoning of Visual Language Models with Generative Negative Mining](). 
@@ -64,11 +69,15 @@ python eval_autogmentation.py \
 ## Citation
 If you find our work helpful in your research, please consider citing us
 ```latex
-@article{sahin2024enhancing,
-    author    = {Ugur Sahin, Hang Li, Qadeer Khan, Daniel Cremers, Volker Tresp},
-    title     = {Enhancing Multimodal Compositional Reasoning of Visual Language Models with Generative Negative Mining},
-    journal   = {WACV},
-    year      = {2024},
+
+@misc{sahin2023enhancing,
+      title={Enhancing Multimodal Compositional Reasoning of Visual Language Models with Generative Negative Mining}, 
+      author={Ugur Sahin and Hang Li and Qadeer Khan and Daniel Cremers and Volker Tresp},
+      year={2023},
+      eprint={2311.03964},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      journal = {Winter Conference on Applications of Computer Vision},
 }
 ```
 ## Acknowlegments
