@@ -80,7 +80,7 @@ If you find our work helpful in your research, please consider citing us
       journal = {Winter Conference on Applications of Computer Vision},
 }
 ```
-## Acknowlegments
+## Acknowledgments
 
 - [Tag2Text](https://github.com/xinyu1205/recognize-anything)
 - [Grounding DINO](https://github.com/IDEA-Research/GroundingDINO)
