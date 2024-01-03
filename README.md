@@ -66,6 +66,13 @@ python eval_autogmentation.py \
 ```
 - Either set snapshot-file or snapshot-folder
 
+## Resources
+[Training annotation file (.json)](https://huggingface.co/datasets/ugursahin/generative-negative-mining-dataset/resolve/main/train.json?download=true)
+
+[Training images (.zip)](https://cvg.cit.tum.de/webshare/g/papers/khamuham/comp_reason/file.zip)
+
+[Pretrained model (pytorch)](https://huggingface.co/ugursahin/generative-negative-mining-clip)
+
 ## Citation
 If you find our work helpful in your research, please consider citing us
 ```latex
